@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.hidden_scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hidden_scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --font-outfit: "Outfit", sans-serif;
+  --font-quicksand: "Quicksand", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+html {
+  height: 100%;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@layer utilities {
+  .animate_paused {
+    animation-play-state: paused;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .icon_sidebar_animate {
+    transition:
+      transform 0.4s ease-in-out,
+      opacity 0.4s ease-in-out;
+  }
+
+  .tooltip_animate {
+    transition:
+      opacity 0.3s linear,
+      visibility 0.3s linear,
+      transform 0.3s ease-out;
+  }
+
+  .hover_animate {
+    transition:
+      transform 0.3s linear,
+      opacity 0.3s linear,
+      visibility 0.3s linear,
+      color 0.15s linear,
+      border-color 0.15s linear,
+      background-color 0.15s linear,
+      box-shadow 0.15s linear;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
