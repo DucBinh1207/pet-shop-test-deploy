@@ -84,7 +84,7 @@ export default function ResetPasswordForm() {
 
       mutate({ data });
     }
-  }, []);
+  }, [mutate, verifyToken]);
 
   // const onSubmit = (data: SetPasswordFormType) => {
   //   mutateSetPassword({ data });
