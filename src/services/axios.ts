@@ -6,7 +6,7 @@ import {
 } from "./api/internal-auth-api";
 
 export const apiClient = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL,
+  baseURL: "https://pet-shop-api-2zab.onrender.com/api",
   headers: {
     "Content-Type": "application/json",
   },
