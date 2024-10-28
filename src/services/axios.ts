@@ -10,7 +10,7 @@ export const apiClient = axios.create({
   headers: {
     "Content-Type": "application/json",
   },
-  timeout: 3000, // nếu vượt quá timeout thì sẽ ngừng request (throw về error)
+  timeout: 5000, // nếu vượt quá timeout thì sẽ ngừng request (throw về error)
 });
 
 apiClient.interceptors.request.use(
