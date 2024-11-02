@@ -14,7 +14,7 @@
   "app\\(products)\\foods\\[productId]\\_components\\content.tsx -> @/app/(products)/_components/reviews": {
     "id": 2158,
     "files": [
-      "static/chunks/158.a6575f75beb20534.js"
+      "static/chunks/158.eb5840e9363a7293.js"
     ]
   },
   "app\\(products)\\pets\\[productId]\\_components\\content.tsx -> ./additional-info": {
@@ -32,7 +32,7 @@
   "app\\(products)\\pets\\[productId]\\_components\\content.tsx -> @/app/(products)/_components/reviews": {
     "id": 2158,
     "files": [
-      "static/chunks/158.a6575f75beb20534.js"
+      "static/chunks/158.eb5840e9363a7293.js"
     ]
   },
   "app\\(products)\\supplies\\[productId]\\_components\\content.tsx -> ./additional-info": {
@@ -50,7 +50,7 @@
   "app\\(products)\\supplies\\[productId]\\_components\\content.tsx -> @/app/(products)/_components/reviews": {
     "id": 2158,
     "files": [
-      "static/chunks/158.a6575f75beb20534.js"
+      "static/chunks/158.eb5840e9363a7293.js"
     ]
   }
 }

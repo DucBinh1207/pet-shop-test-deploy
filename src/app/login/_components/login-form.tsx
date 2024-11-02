@@ -67,7 +67,7 @@ export default function LoginForm() {
         <div className="w-[380px] max-w-full px-[20px] pb-[50px] pt-[40px]">
           <div className="flex flex-col">
             <h2 className="mb-[35px] text-center font-quicksand text-[27px] font-bold leading-[1.27] tracking-[-0.01em] text-primary">
-              Login
+             Đăng nhập
             </h2>
 
             <form onSubmit={onSubmit}>
@@ -77,7 +77,7 @@ export default function LoginForm() {
                     className="pb-[10px] text-[13px] font-normal leading-[18px] tracking-[0.02em] text-primary"
                     htmlFor="email"
                   >
-                    Email address *
+                    Email *
                   </label>
                   <FormInput
                     id="email"
@@ -92,7 +92,7 @@ export default function LoginForm() {
                     className="pb-[10px] text-[13px] font-normal leading-[18px] tracking-[0.02em] text-primary"
                     htmlFor="password"
                   >
-                    Password *
+                    Mật khẩu *
                   </label>
                   <FormInput
                     id="password"
@@ -117,7 +117,7 @@ export default function LoginForm() {
                       )}
                     />
                     <span className="text-[13px] font-normal leading-[18px] tracking-[0.02em] text-primary hover:text-secondary">
-                      &nbsp;Remember Me
+                      &nbsp;Ghi nhớ đăng nhập
                     </span>
                   </label>
 
@@ -125,7 +125,7 @@ export default function LoginForm() {
                     href="/lost-password"
                     className="text-[14px] font-normal leading-[1.5] tracking-[0.02em] text-primary hover:text-secondary"
                   >
-                    Lost your password ?
+                    Quên mật khẩu ?
                   </Link>
                 </li>
 
@@ -140,18 +140,18 @@ export default function LoginForm() {
                     )}
                     disabled={isMutating}
                   >
-                    Log In
+                   Đăng nhập
                   </Button>
                 </li>
 
                 <li className="flex flex-col">
                   <div className="flex justify-center gap-[20px] text-[14px] font-normal leading-[1.5] tracking-[0.02em] text-text_color">
-                    Not A Member ?
+                    Chưa phải có tài khoản ?
                     <Link
                       href="/register"
                       className="text-[14px] font-normal leading-[1.5] tracking-[0.02em] text-primary hover:text-secondary"
                     >
-                      Register
+                      Đăng ký
                     </Link>
                   </div>
                 </li>

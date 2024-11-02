@@ -1,5 +1,6 @@
 import Button from "@/components/common/button";
 import StarIcon from "@/components/common/icons/star-icon";
+import { getAuthTokenFromInternalServer } from "@/services/api/internal-auth-api";
 import cn from "@/utils/style/cn";
 import { useState } from "react";
 
@@ -52,6 +53,14 @@ export default function ReviewForm() {
       <Button
         size="xsm"
         className="mt-[20px] text-center text-[13px] font-bold leading-[16px]"
+        onClick={async () => {
+          const token = await getAuthTokenFromInternalServer();
+          if (!token) {
+            window.location.href = "/login";
+          } else {
+            window.location.href = "/not_found";
+          }
+        }}
       >
         Submit
       </Button>

@@ -12,5 +12,7 @@ export async function getAuthTokenFromInternalServer() {
 }
 
 export async function deleteAuthTokenFromInternalServer() {
-  await axios.delete("/api/auth/token");
+  try {
+    await axios.delete("/api/auth/token");
+  } catch (error) {}
 }

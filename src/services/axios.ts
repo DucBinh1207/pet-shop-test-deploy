@@ -10,12 +10,13 @@ export const apiClient = axios.create({
   headers: {
     "Content-Type": "application/json",
   },
-  timeout: 3000, // nếu vượt quá timeout thì sẽ ngừng request (throw về error)
+  timeout: 7000, // nếu vượt quá timeout thì sẽ ngừng request (throw về error)
 });
 
 apiClient.interceptors.request.use(
-  (config) => {
-      const token = getAuthTokenFromInternalServer();
+  async (config) => {
+    const token = await getAuthTokenFromInternalServer();
+    console.log(token);
 
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
@@ -40,7 +41,7 @@ apiClient.interceptors.response.use(
           throw new Error(error.response.data.message);
         case ErrorStatus.UNAUTHORIZED:
           deleteAuthTokenFromInternalServer();
-          // window.location.href = "/login";
+          window.location.href = "/login";
           throw new Error(error.response.data.message);
         case ErrorStatus.NOT_FOUND:
           window.location.href = "/not_found";
@@ -74,11 +75,11 @@ export const post = <T>({
   config,
 }: {
   url: string;
-  data?: unknown;
+  data: unknown;
   config?: AxiosRequestConfig;
 }): Promise<T> => apiClient.post(url, data, config);
 
-export const update = ({
+export const update = <T>({
   url,
   data,
   config,
@@ -86,6 +87,6 @@ export const update = ({
   url: string;
   data: unknown;
   config?: AxiosRequestConfig;
-}) => apiClient.put(url, data, config);
+}): Promise<T> => apiClient.put(url, data, config);
 
 export const remove = ({ url }: { url: string }) => apiClient.delete(url);

@@ -21,7 +21,7 @@ export default function PlayVideo() {
           setIsOpen(true);
         }}
       >
-        See on Video
+        Xem video
       </Button>
 
       {isOpen && (
