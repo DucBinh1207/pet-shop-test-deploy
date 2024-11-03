@@ -26,6 +26,8 @@ export async function POST(req: NextRequest) {
       value: token,
       httpOnly: true,
       sameSite: "lax",
+      secure:true,
+      domain:"pet-shop-test-deploy.vercel.app",
       path: "/",
       maxAge: payLoad.exp,
     });
