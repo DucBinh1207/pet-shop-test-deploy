@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
       name: CookieKey.AUTH_TOKEN,
       value: token,
       httpOnly: true,
-      sameSite: "lax",
+      sameSite: "none",
       secure:true,
       domain:"pet-shop-test-deploy.vercel.app",
       path: "/",
